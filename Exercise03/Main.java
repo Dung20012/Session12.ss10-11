@@ -18,13 +18,13 @@ public class Main {
             System.out.println("7. Thống kê tổng doanh thu các đơn hàng Devivered");
             System.out.println("8. Thống kê số lượng đơn hàng theo từng trạng thái");
             System.out.println("9. Tìm kiếm đơn hàng có giá trị lớn nhất");
-            System.out.println("0. Thoát");
+            System.out.println("10. Thoát");
             System.out.println("Lựa chọn của bạn: ");
 
             try {
                 choice = Integer.parseInt(scanner.nextLine());
             }catch (Exception e){
-                System.err.println("Vui lòng nhập số hợp lệ từ 0 - 9");
+                System.err.println("Vui lòng nhập số hợp lệ từ 1 - 10");
                 continue;
             }
             switch (choice){
@@ -55,10 +55,10 @@ public class Main {
                 case 9:
                     OrderBusiness.findMaxOrder();
                     break;
-                case 0:
+                case 10:
                     System.exit(0);
                 default:
-                    System.err.println("Vui lòng chọn từ 1 - 9");
+                    System.err.println("Vui lòng chọn từ 1 - 10");
             }
         }while (true);
     }
